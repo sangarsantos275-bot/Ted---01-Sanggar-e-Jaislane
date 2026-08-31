@@ -1,1 +1,123 @@
+import csv
 
+# REQUISITO 5: Criar pelo menos 3 funções (Função 1 - Carga de dados)
+def carregar_csv(caminho_arquivo):
+    """Carrega dados de um arquivo CSV e retorna como uma lista de tuplas."""
+    dados = []
+    try:
+        with open(caminho_arquivo, mode='r', encoding='utf-8') as f:
+            leitor = csv.reader(f)
+            headers = next(leitor)  # Ignora o cabeçalho
+            for linha in leitor:
+                if linha:  # Ignora linhas vazias
+                    dados.append(tuple(linha))
+    except FileNotFoundError:
+        print(f"Erro: O arquivo {caminho_arquivo} não foi encontrado.")
+    return dados
+
+# REQUISITO 5: Criar pelo menos 3 funções (Função 2 - Processamento e Modelagem)
+def processar_dados(dados_livros, dados_emprestimos):
+    """Processa e limpa os dados aplicando estruturas organizadas e remoção de duplicados."""
+    
+    # REQUISITO 2: Utilizar set para eliminar duplicidades nos empréstimos
+    # O arquivo fornecido contém registros repetidos no final (E031 a E034)
+    emprestimos_unicos = list(set(dados_emprestimos))
+    
+    # REQUISITO 1: Modelar os dados utilizando dicionários e estruturas aninhadas
+    # Dicionário de livros para busca rápida por ID
+    mapa_livros = {}
+    for livro in dados_livros:
+        id_livro, titulo, autor, categoria = livro
+        mapa_livros[id_livro] = {
+            "titulo": titulo,
+            "autor": autor,
+            "categoria": categoria
+        }
+    
+    # Lista aninhada com dicionários contendo os dados dos empréstimos enriquecidos
+    historico_emprestimos = []
+    for emp in emprestimos_unicos:
+        id_emp, aluno, id_livro, data, status = emp
+        
+        # Faz o cruzamento para obter o título e categoria do livro
+        info_livro = mapa_livros.get(id_livro, {"titulo": "Desconhecido", "categoria": "Desconhecida"})
+        
+        registro = {
+            "id_emprestimo": id_emp,
+            "aluno": aluno,
+            "id_livro": id_livro,
+            "titulo_livro": info_livro["titulo"],
+            "categoria_livro": info_livro["categoria"],
+            "data_emprestimo": data,
+            "status": status
+        }
+        historico_emprestimos.append(registro)
+        
+    return historico_emprestimos
+
+# REQUISITO 5: Criar pelo menos 3 funções (Função 3 - Execução das Análises)
+def executar_analises_biblioteca(emprestimos):
+    """Executa as análises obrigatórias exigidas pelo cenário 03."""
+    
+    # REQUISITO 7: Apresentar os resultados de forma organizada no terminal
+    print("=" * 60)
+    print("          SISTEMA DE ANÁLISE DE DADOS - BIBLIOTECA          ")
+    print("=" * 60)
+
+    # -------------------------------------------------------------------------
+    # ANÁLISE 1: Identificar os livros mais emprestados (REQUISITO 6.1)
+    # REQUISITO 3 (List Comprehension 1): Extrai os títulos de todos os empréstimos
+    todos_titulos = [emp["titulo_livro"] for emp in emprestimos]
+    
+    # REQUISITO 4 (Dict Comprehension): Conta a frequência de cada livro cadastrado
+    contagem_livros = {titulo: todos_titulos.count(titulo) for titulo in set(todos_titulos)}
+    
+    print("\n[Análise 1] Ranking de Livros Mais Emprestados:")
+    # Ordena do maior para o menor número de empréstimos
+    ranking = sorted(contagem_livros.items(), key=lambda x: x[1], reverse=True)
+    for livro, total in ranking:
+        print(f"  • {livro}: {total} empréstimo(s)")
+
+    # -------------------------------------------------------------------------
+    # ANÁLISE 2: Encontrar leitores com empréstimos em aberto ou atrasados (REQUISITO 6.2)
+    # REQUISITO 3 (List Comprehension 2): Filtragem de leitores inadimplentes
+    leitores_pendentes = [
+        emp["aluno"] for emp in emprestimos 
+        if emp["status"] in ["Em aberto", "Atrasado"]
+    ]
+    # Remove duplicados para listar cada leitor com pendência apenas uma vez
+    leitores_unicos_pendentes = sorted(list(set(leitores_pendentes)))
+    
+    print(f"\n[Análise 2] Leitores com Pendências Ativas (Em aberto/Atrasado) [Total: {len(leitores_unicos_pendentes)}]:")
+    print("  " + ", ".join(leitores_unicos_pendentes))
+
+    # -------------------------------------------------------------------------
+    # ANÁLISE 3: Comparar leitores de duas categorias usando Conjuntos (REQUISITO 6.3)
+    # REQUISITO 2: Operações de interseção e diferença com sets
+    leitores_romance = {emp["aluno"] for emp in emprestimos if emp["categoria_livro"] == "Romance"}
+    leitores_ficcao = {emp["aluno"] for emp in emprestimos if emp["categoria_livro"] == "Ficção"}
+    
+    # Operações de conjuntos
+    comum = leitores_romance.intersection(leitores_ficcao)
+    exclusivo_romance = list(leitores_romance.difference(leitores_ficcao))
+    exclusivo_ficcao = list(leitores_ficcao.difference(leitores_romance))
+    
+    print("\n[Análise 3] Comparação de Leitores (Romance vs Ficção):")
+    print(f"  • Leitores em comum (leram ambos): {list(comum) if comum else 'Nenhum'}")
+    print(f"  • Exclusivos da categoria Romance: {sorted(exclusivo_romance)}")
+    print(f"  • Exclusivos da categoria Ficção: {sorted(exclusivo_ficcao)}")
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    # Caminhos relativos seguindo a estrutura padrão exigida
+    arquivo_livros = "dados/livros.csv"
+    arquivo_emprestimos = "dados/emprestimos.csv"
+    
+    # Fluxo principal de execução
+    dados_brutos_livros = carregar_csv(arquivo_livros)
+    dados_brutos_emprestimos = carregar_csv(arquivo_emprestimos)
+    
+    if dados_brutos_livros and dados_brutos_emprestimos:
+        dados_completos = processar_dados(dados_brutos_livros, dados_brutos_emprestimos)
+        executar_analises_biblioteca(dados_completos)
