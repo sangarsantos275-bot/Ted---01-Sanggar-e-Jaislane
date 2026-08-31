@@ -1,0 +1,9 @@
+id_livro,titulo,autor,categoria
+L01,Dom Casmurro,Machado de Assis,Romance
+L02,1984,George Orwell,Ficção
+L03,O Hobbit,J. R. R. Tolkien,Fantasia
+L04,Clean Code,Robert Martin,Tecnologia
+L05,Python Fluente,Luciano Ramalho,Tecnologia
+L06,Sapiens,Yuval Harari,História
+L07,Capitães da Areia,Jorge Amado,Romance
+L08,Duna,Frank Herbert,Ficção

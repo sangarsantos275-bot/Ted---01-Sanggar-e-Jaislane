@@ -1,0 +1,155 @@
+id_emprestimo,aluno,id_livro,data_emprestimo,status
+E001,Leitor 17,L05,2026-06-08,Atrasado
+E002,Leitor 19,L07,2026-07-29,Atrasado
+E003,Leitor 30,L03,2026-05-29,Atrasado
+E004,Leitor 06,L07,2026-01-30,Devolvido
+E005,Leitor 09,L08,2026-08-02,Atrasado
+E006,Leitor 24,L02,2026-07-15,Devolvido
+E007,Leitor 15,L04,2026-03-30,Devolvido
+E008,Leitor 02,L01,2026-04-16,Atrasado
+E009,Leitor 03,L05,2026-02-25,Em aberto
+E010,Leitor 15,L07,2026-06-07,Em aberto
+E011,Leitor 16,L02,2026-07-02,Atrasado
+E012,Leitor 11,L06,2026-07-11,Devolvido
+E013,Leitor 39,L06,2026-05-31,Devolvido
+E014,Leitor 13,L04,2026-03-06,Atrasado
+E015,Leitor 14,L07,2026-01-15,Em aberto
+E016,Leitor 27,L08,2026-02-02,Atrasado
+E017,Leitor 27,L07,2026-03-30,Devolvido
+E018,Leitor 08,L07,2026-03-24,Devolvido
+E019,Leitor 28,L03,2026-05-24,Atrasado
+E020,Leitor 24,L05,2026-01-06,Devolvido
+E021,Leitor 12,L07,2026-04-27,Atrasado
+E022,Leitor 24,L04,2026-05-28,Devolvido
+E023,Leitor 34,L05,2026-07-15,Atrasado
+E024,Leitor 10,L03,2026-04-14,Atrasado
+E025,Leitor 04,L06,2026-04-02,Atrasado
+E026,Leitor 04,L03,2026-01-11,Atrasado
+E027,Leitor 30,L01,2026-02-20,Em aberto
+E028,Leitor 25,L02,2026-03-12,Em aberto
+E029,Leitor 14,L07,2026-04-30,Em aberto
+E030,Leitor 21,L08,2026-05-28,Devolvido
+E031,Leitor 32,L02,2026-07-29,Atrasado
+E032,Leitor 21,L07,2026-05-30,Devolvido
+E033,Leitor 18,L06,2026-07-23,Atrasado
+E034,Leitor 38,L04,2026-02-05,Atrasado
+E035,Leitor 29,L03,2026-07-24,Devolvido
+E036,Leitor 33,L07,2026-06-24,Em aberto
+E037,Leitor 21,L01,2026-03-28,Atrasado
+E038,Leitor 14,L03,2026-07-15,Em aberto
+E039,Leitor 19,L06,2026-03-31,Devolvido
+E040,Leitor 03,L01,2026-03-20,Devolvido
+E041,Leitor 32,L02,2026-07-16,Devolvido
+E042,Leitor 39,L06,2026-06-22,Em aberto
+E043,Leitor 36,L05,2026-04-30,Atrasado
+E044,Leitor 40,L05,2026-01-04,Devolvido
+E045,Leitor 12,L07,2026-02-05,Devolvido
+E046,Leitor 13,L06,2026-01-19,Em aberto
+E047,Leitor 16,L04,2026-02-15,Em aberto
+E048,Leitor 06,L04,2026-05-02,Devolvido
+E049,Leitor 35,L04,2026-07-11,Devolvido
+E050,Leitor 39,L06,2026-07-22,Devolvido
+E051,Leitor 28,L08,2026-04-16,Atrasado
+E052,Leitor 37,L02,2026-05-02,Em aberto
+E053,Leitor 40,L07,2026-03-13,Atrasado
+E054,Leitor 04,L04,2026-01-20,Em aberto
+E055,Leitor 32,L03,2026-03-24,Devolvido
+E056,Leitor 21,L03,2026-04-14,Devolvido
+E057,Leitor 38,L06,2026-04-15,Atrasado
+E058,Leitor 30,L02,2026-06-27,Atrasado
+E059,Leitor 29,L06,2026-05-19,Devolvido
+E060,Leitor 35,L01,2026-05-29,Em aberto
+E061,Leitor 19,L03,2026-03-05,Devolvido
+E062,Leitor 27,L02,2026-01-04,Em aberto
+E063,Leitor 27,L04,2026-02-07,Atrasado
+E064,Leitor 31,L04,2026-05-09,Atrasado
+E065,Leitor 14,L04,2026-05-17,Devolvido
+E066,Leitor 24,L03,2026-01-06,Em aberto
+E067,Leitor 23,L08,2026-02-12,Em aberto
+E068,Leitor 32,L07,2026-03-01,Em aberto
+E069,Leitor 32,L04,2026-01-14,Em aberto
+E070,Leitor 31,L03,2026-02-14,Em aberto
+E071,Leitor 21,L07,2026-04-20,Devolvido
+E072,Leitor 12,L05,2026-03-20,Atrasado
+E073,Leitor 15,L05,2026-07-24,Em aberto
+E074,Leitor 38,L05,2026-02-02,Atrasado
+E075,Leitor 16,L03,2026-01-31,Devolvido
+E076,Leitor 28,L03,2026-06-18,Devolvido
+E077,Leitor 02,L05,2026-02-26,Devolvido
+E078,Leitor 36,L05,2026-07-01,Em aberto
+E079,Leitor 32,L01,2026-05-19,Atrasado
+E080,Leitor 39,L08,2026-02-02,Atrasado
+E081,Leitor 27,L06,2026-01-14,Atrasado
+E082,Leitor 19,L02,2026-07-19,Devolvido
+E083,Leitor 05,L08,2026-02-04,Atrasado
+E084,Leitor 32,L07,2026-08-09,Em aberto
+E085,Leitor 04,L05,2026-05-03,Em aberto
+E086,Leitor 04,L01,2026-02-19,Atrasado
+E087,Leitor 18,L07,2026-05-01,Atrasado
+E088,Leitor 04,L01,2026-01-02,Devolvido
+E089,Leitor 05,L01,2026-07-04,Em aberto
+E090,Leitor 24,L04,2026-07-09,Devolvido
+E091,Leitor 17,L07,2026-02-28,Atrasado
+E092,Leitor 31,L01,2026-04-10,Em aberto
+E093,Leitor 38,L06,2026-05-05,Atrasado
+E094,Leitor 35,L03,2026-03-13,Em aberto
+E095,Leitor 33,L03,2026-01-13,Em aberto
+E096,Leitor 17,L07,2026-02-17,Devolvido
+E097,Leitor 07,L07,2026-05-04,Em aberto
+E098,Leitor 30,L03,2026-01-03,Atrasado
+E099,Leitor 30,L07,2026-02-13,Em aberto
+E100,Leitor 29,L04,2026-04-14,Em aberto
+E101,Leitor 05,L08,2026-04-17,Devolvido
+E102,Leitor 09,L07,2026-05-03,Em aberto
+E103,Leitor 29,L08,2026-04-11,Devolvido
+E104,Leitor 06,L06,2026-05-05,Devolvido
+E105,Leitor 10,L04,2026-03-04,Em aberto
+E106,Leitor 19,L06,2026-07-08,Devolvido
+E107,Leitor 40,L03,2026-04-11,Devolvido
+E108,Leitor 10,L05,2026-06-06,Atrasado
+E109,Leitor 34,L05,2026-04-28,Devolvido
+E110,Leitor 30,L03,2026-02-19,Devolvido
+E111,Leitor 22,L07,2026-04-09,Atrasado
+E112,Leitor 14,L04,2026-03-02,Devolvido
+E113,Leitor 39,L02,2026-04-10,Em aberto
+E114,Leitor 27,L02,2026-04-09,Atrasado
+E115,Leitor 39,L04,2026-01-15,Em aberto
+E116,Leitor 33,L03,2026-03-23,Devolvido
+E117,Leitor 09,L07,2026-07-25,Em aberto
+E118,Leitor 19,L03,2026-02-08,Em aberto
+E119,Leitor 36,L03,2026-07-23,Atrasado
+E120,Leitor 11,L03,2026-06-01,Atrasado
+E121,Leitor 21,L03,2026-05-23,Em aberto
+E122,Leitor 06,L07,2026-06-06,Devolvido
+E123,Leitor 06,L05,2026-07-15,Em aberto
+E124,Leitor 33,L03,2026-03-12,Devolvido
+E125,Leitor 21,L03,2026-01-05,Devolvido
+E126,Leitor 28,L08,2026-03-14,Atrasado
+E127,Leitor 01,L04,2026-05-14,Em aberto
+E128,Leitor 05,L01,2026-03-30,Devolvido
+E129,Leitor 11,L04,2026-02-24,Devolvido
+E130,Leitor 27,L02,2026-03-03,Atrasado
+E131,Leitor 24,L07,2026-05-23,Em aberto
+E132,Leitor 37,L07,2026-04-10,Em aberto
+E133,Leitor 04,L04,2026-03-19,Devolvido
+E134,Leitor 08,L06,2026-08-06,Atrasado
+E135,Leitor 20,L07,2026-03-19,Atrasado
+E136,Leitor 30,L02,2026-06-02,Devolvido
+E137,Leitor 14,L08,2026-02-03,Atrasado
+E138,Leitor 40,L02,2026-03-25,Atrasado
+E139,Leitor 14,L04,2026-03-22,Atrasado
+E140,Leitor 40,L02,2026-03-30,Devolvido
+E141,Leitor 40,L03,2026-03-30,Atrasado
+E142,Leitor 03,L06,2026-06-27,Devolvido
+E143,Leitor 37,L04,2026-02-13,Em aberto
+E144,Leitor 23,L08,2026-07-28,Devolvido
+E145,Leitor 17,L06,2026-04-30,Atrasado
+E146,Leitor 07,L06,2026-04-27,Atrasado
+E147,Leitor 04,L04,2026-06-09,Devolvido
+E148,Leitor 24,L03,2026-03-26,Em aberto
+E149,Leitor 37,L07,2026-05-22,Devolvido
+E150,Leitor 04,L01,2026-05-11,Atrasado
+E031,Leitor 32,L02,2026-07-29,Atrasado
+E032,Leitor 21,L07,2026-05-30,Devolvido
+E033,Leitor 18,L06,2026-07-23,Atrasado
+E034,Leitor 38,L04,2026-02-05,Atrasado
